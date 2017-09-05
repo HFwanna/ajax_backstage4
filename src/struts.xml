@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+		<!-- 这个是国际化编码，处理乱码的，我们开发可以不写 -->
+		<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+		<!-- 这里是开发者模式，可以支持reload，即我们改写代码不用重启服务器就可以重新编译 -->
+		<constant name="struts.devMode" value="true"></constant>
+		<!-- name随便取，namespace是我们访问action的命名空间，extends必须继承struts-default，否则无法享用struts2功能 -->
+		<package name="demo" namespace="/" extends="struts-default">
+		<!-- 这里是配置action的，name就是我们后面用于访问路径的名字，class填写action完整类名，method是指定将引用该类下的哪个方法 -->
+			<action name="AjaxStruts2Hibernate" class="cn.zhku.jsjs.haofeng.action.AjaxStruts2Hibernate" method="execute">
+				<!-- 如果在action类中return "success"，那么将转发到/inde.jsp中，
+				还可以加入type属性，指定redirect重定向，指定chain转发到action，
+				指定redirectAction重定向到action等
+				 -->
+				<result name="success">/index.jsp</result>
+				<!-- <result name="error" type="redirectAction">
+					<param name="actionName">errorAction</param>
+					<param name="namespace">/error</param>
+				</result> -->
+			</action>
+		</package>
+	
+	</struts>
