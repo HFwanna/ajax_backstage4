@@ -16,7 +16,7 @@ $(function(){
 		var returnStr = "";
 		$.ajax({
 			type:"POST",
-			url:"/ajax_backstage4/AjaxStruts2Hibernate",
+			url:"/ajax_backstage4/AjaxStruts2HibernateAction",
 			contentType:"application/x-www-form-urlencoded",
 			data:{"content":content},
 			dataType:"json",
@@ -47,7 +47,7 @@ $(function(){
 		var sub = $("#search").val();
 		$.ajax({
 			type:"POST",
-			url:"/ajax_backstage4/AjaxStruts2Hibernate",
+			url:"/ajax_backstage4/AjaxStruts2HibernateAction",
 			contentType:"application/json",
 			data:JSON.stringify({"sub":sub}),
 			dataType:"json",

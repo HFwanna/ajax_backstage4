@@ -15,9 +15,10 @@
 			
 			<property name="hibernate.hbm2ddl.auto">update</property>
 			
+			<!--
 			<property name="hibernate.connection.isolation">4</property>
-			<property name="current_session_context_class">thread</property>
-			
+			 <property name="current_session_context_class">thread</property>
+			 -->
 			<mapping resource="cn/zhku/jsjs/haofeng/domain/MyHibernate.hbm.xml"/>
 			<mapping resource="cn/zhku/jsjs/haofeng/domain/MyTable.hbm.xml"/>
 			
